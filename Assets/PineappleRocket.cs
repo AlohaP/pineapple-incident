@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PineappleRocket : MonoBehaviour {
 
+    Rigidbody rigidBody;
+
 	// Use this for initialization
 	void Start () {
-      
+        rigidBody = GetComponent<Rigidbody>();
     }
 	
 	// Update is called once per frame
@@ -19,7 +21,7 @@ public class PineappleRocket : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.Space)) //can thrust while rotating
         {
-            print("Thrusting !");
+            rigidBody.AddRelativeForce(Vector3.up);
         }
 
         if (Input.GetKey(KeyCode.A))
