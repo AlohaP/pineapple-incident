@@ -38,6 +38,7 @@ public class PineappleRocket : MonoBehaviour {
 
     private void Rotate()
     {
+        rigidBody.freezeRotation = true; //take manual control of rotation
         if (Input.GetKey(KeyCode.A))
         {
             //we acces transform component in Unity, wich is available to every game object
@@ -47,5 +48,6 @@ public class PineappleRocket : MonoBehaviour {
         {
             transform.Rotate(-Vector3.forward);
         }
+        rigidBody.freezeRotation = false;
     }
 }
