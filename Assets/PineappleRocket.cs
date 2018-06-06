@@ -19,7 +19,23 @@ public class PineappleRocket : MonoBehaviour {
 	void Update () {
         Thrust();
         Rotate();
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Friendly":
+                print("ok");
+                break;
+            case "Fuel":
+                print("fuel");
+                break;
+            default:
+                print("Dead");
+                //kill a player
+                break;
+        }
     }
 
     private void Thrust()
