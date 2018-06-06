@@ -6,9 +6,11 @@ public class PineappleRocket : MonoBehaviour {
 
     Rigidbody rigidBody;
     AudioSource audioSource;
+    [SerializeField] float rcsThrust = 100f;  // rcs - reaction control system
+    [SerializeField] float mainThrust = 100f; 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -24,7 +26,7 @@ public class PineappleRocket : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.Space)) //can thrust while rotating
         {
-            rigidBody.AddRelativeForce(Vector3.up);
+            rigidBody.AddRelativeForce(Vector3.up * mainThrust);
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();
@@ -38,15 +40,17 @@ public class PineappleRocket : MonoBehaviour {
 
     private void Rotate()
     {
+        
+        float rotationThisFrame = rcsThrust * Time.deltaTime;
         rigidBody.freezeRotation = true; //take manual control of rotation
         if (Input.GetKey(KeyCode.A))
         {
             //we acces transform component in Unity, wich is available to every game object
-            transform.Rotate(Vector3.forward);      // Vector3.forward makes object rotates on z axis        
+            transform.Rotate(Vector3.forward * rotationThisFrame);      // Vector3.forward makes object rotates on z axis        
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(-Vector3.forward);
+            transform.Rotate(-Vector3.forward * rotationThisFrame);
         }
         rigidBody.freezeRotation = false;
     }
