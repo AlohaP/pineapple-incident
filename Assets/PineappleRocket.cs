@@ -15,11 +15,12 @@ public class PineappleRocket : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        ProccesInput();
+        Thrust();
+        Rotate();
 
     }
 
-    private void ProccesInput()
+    private void Thrust()
     {
         if (Input.GetKey(KeyCode.Space)) //can thrust while rotating
         {
@@ -28,16 +29,22 @@ public class PineappleRocket : MonoBehaviour {
             {
                 audioSource.Play();
             }
-        } else
+        }
+        else
         {
             audioSource.Stop();
         }
+    }
 
+    private void Rotate()
+    {
         if (Input.GetKey(KeyCode.A))
         {
             //we acces transform component in Unity, wich is available to every game object
             transform.Rotate(Vector3.forward);      // Vector3.forward makes object rotates on z axis        
-        } else if (Input.GetKey(KeyCode.D)){
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
             transform.Rotate(-Vector3.forward);
         }
     }
