@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PineappleRocket : MonoBehaviour {
@@ -26,14 +25,14 @@ public class PineappleRocket : MonoBehaviour {
         switch (collision.gameObject.tag)
         {
             case "Friendly":
-                print("ok");
                 break;
-            case "Fuel":
-                print("fuel");
+            case "Finish":
+                print("Hit finish!");
+                SceneManager.LoadScene(0);
                 break;
             default:
                 print("Dead");
-                //kill a player
+                SceneManager.LoadScene(1);
                 break;
         }
     }
