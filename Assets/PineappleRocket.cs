@@ -6,7 +6,8 @@ public class PineappleRocket : MonoBehaviour {
     Rigidbody rigidBody;
     AudioSource audioSource;
     [SerializeField] float rcsThrust = 100f;  // rcs - reaction control system
-    [SerializeField] float mainThrust = 100f; 
+    [SerializeField] float mainThrust = 100f;
+    [SerializeField] AudioClip mainEngine; 
 
     enum State { Alive, Dying, Transcending};
     State state = State.Alive;
@@ -22,8 +23,8 @@ public class PineappleRocket : MonoBehaviour {
 
         //todo stop sound while dead
         if (state == State.Alive) {
-            Thrust();
-            Rotate();
+            RespondToThrustInput();
+            RespondToRotateInput();
         }
     }
 
@@ -37,7 +38,7 @@ public class PineappleRocket : MonoBehaviour {
                 break;
             case "Finish":
                 state = State.Transcending;
-                Invoke("LoadNextScene", 2f);  //parametirize time
+                Invoke("LoadNextScene", 1f);  //parametirize time
                 break;
             default:
                 state = State.Dying;
@@ -56,15 +57,11 @@ public class PineappleRocket : MonoBehaviour {
         SceneManager.LoadScene(0);
     }
 
-    private void Thrust()
+    private void RespondToThrustInput()
     {
         if (Input.GetKey(KeyCode.Space)) //can thrust while rotating
         {
-            rigidBody.AddRelativeForce(Vector3.up * mainThrust);
-            if (!audioSource.isPlaying)
-            {
-                audioSource.Play();
-            }
+            ApplyThrust();
         }
         else
         {
@@ -72,7 +69,16 @@ public class PineappleRocket : MonoBehaviour {
         }
     }
 
-    private void Rotate()
+    private void ApplyThrust()
+    {
+        rigidBody.AddRelativeForce(Vector3.up * mainThrust);
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(mainEngine);
+        }
+    }
+
+    private void RespondToRotateInput()
     {
         
         float rotationThisFrame = rcsThrust * Time.deltaTime;
