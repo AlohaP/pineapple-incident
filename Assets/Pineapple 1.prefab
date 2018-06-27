@@ -1914,4 +1914,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rcsThrust: 290
   mainThrust: 40
-  mainEngine: {fileID: 8300000, guid: 7223549746575b342a9abc4dc39fc0e4, type: 3}
+  mainEngine: {fileID: 8300000, guid: 293e9b47ba403ba46b39f466a0ab3988, type: 3}
+  deathEngine: {fileID: 8300000, guid: 7133017ee5508cc4a9fb74ea81b6e6aa, type: 3}
+  winEngine: {fileID: 8300000, guid: 1018575687a8ae249ad4681e59da72a2, type: 3}

@@ -8,6 +8,8 @@ public class PineappleRocket : MonoBehaviour {
     [SerializeField] float rcsThrust = 100f;  // rcs - reaction control system
     [SerializeField] float mainThrust = 100f;
     [SerializeField] AudioClip mainEngine; 
+    [SerializeField] AudioClip deathEngine; 
+    [SerializeField] AudioClip winEngine; 
 
     enum State { Alive, Dying, Transcending};
     State state = State.Alive;
@@ -38,10 +40,12 @@ public class PineappleRocket : MonoBehaviour {
                 break;
             case "Finish":
                 state = State.Transcending;
+                audioSource.PlayOneShot(winEngine);
                 Invoke("LoadNextScene", 1f);  //parametirize time
                 break;
             default:
                 state = State.Dying;
+                audioSource.PlayOneShot(deathEngine);
                 Invoke("LoadFirstScene", 2f);
                 break;
         }
