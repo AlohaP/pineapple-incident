@@ -7,9 +7,14 @@ public class PineappleRocket : MonoBehaviour {
     AudioSource audioSource;
     [SerializeField] float rcsThrust = 100f;  // rcs - reaction control system
     [SerializeField] float mainThrust = 100f;
+
     [SerializeField] AudioClip mainEngine; 
-    [SerializeField] AudioClip death; 
-    [SerializeField] AudioClip succes; 
+    [SerializeField] AudioClip death;
+    [SerializeField] AudioClip succes;
+
+    [SerializeField] ParticleSystem mainEngineParticles; 
+    [SerializeField] ParticleSystem deathParticles; 
+    [SerializeField] ParticleSystem succesParticles; 
 
     enum State { Alive, Dying, Transcending};
     State state = State.Alive;
@@ -22,8 +27,6 @@ public class PineappleRocket : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        //todo stop sound while dead
         if (state == State.Alive) {
             RespondToThrustInput();
             RespondToRotateInput();
