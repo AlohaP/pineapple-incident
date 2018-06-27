@@ -8,6 +8,9 @@ public class PineappleRocket : MonoBehaviour {
     [SerializeField] float rcsThrust = 100f;  // rcs - reaction control system
     [SerializeField] float mainThrust = 100f; 
 
+    enum State { Alive, Dying, Transcending};
+    State state = State.Alive;
+
     // Use this for initialization
     void Start () {
         rigidBody = GetComponent<Rigidbody>();
@@ -16,25 +19,41 @@ public class PineappleRocket : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Thrust();
-        Rotate();
+
+        //todo stop sound while dead
+        if (state == State.Alive) {
+            Thrust();
+            Rotate();
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (state != State.Alive){ return; }
+
         switch (collision.gameObject.tag)
         {
             case "Friendly":
                 break;
             case "Finish":
-                print("Hit finish!");
-                SceneManager.LoadScene(0);
+                state = State.Transcending;
+                Invoke("LoadNextScene", 2f);  //parametirize time
                 break;
             default:
-                print("Dead");
-                SceneManager.LoadScene(1);
+                state = State.Dying;
+                Invoke("LoadFirstScene", 2f);
                 break;
         }
+    }
+
+    private void LoadFirstScene()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void Thrust()
