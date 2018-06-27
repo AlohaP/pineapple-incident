@@ -201,7 +201,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4745155411262388, guid: 41645e9d429e4054f802080b934aa83f, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41645e9d429e4054f802080b934aa83f, type: 2}
@@ -394,28 +394,6 @@ Prefab:
     - target: {fileID: 1076775447701372, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
       propertyPath: m_Name
       value: Pineapple Rocket
-      objectReference: {fileID: 0}
-    - target: {fileID: 4498951820449030, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114811761051880652, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: rcsThrust
-      value: 290
-      objectReference: {fileID: 0}
-    - target: {fileID: 114811761051880652, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: mainThrust
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4563069023541072, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.8898436
-      objectReference: {fileID: 0}
-    - target: {fileID: 4563069023541072, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.5080446
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
