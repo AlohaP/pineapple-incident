@@ -55,6 +55,7 @@ public class PineappleRocket : MonoBehaviour {
         state = State.Dying;
         audioSource.Stop();
         audioSource.PlayOneShot(death);
+        succesParticles.Play();
         Invoke("LoadFirstScene", 2f);
     }
 
@@ -63,6 +64,7 @@ public class PineappleRocket : MonoBehaviour {
         state = State.Transcending;
         audioSource.Stop();
         audioSource.PlayOneShot(succes);
+        deathParticles.Play();
         Invoke("LoadNextScene", 1f);  //parametirize time
     }
 
@@ -85,6 +87,7 @@ public class PineappleRocket : MonoBehaviour {
         else
         {
             audioSource.Stop();
+            mainEngineParticles.Stop();
         }
     }
 
@@ -95,6 +98,7 @@ public class PineappleRocket : MonoBehaviour {
         {
             audioSource.PlayOneShot(mainEngine);
         }
+        mainEngineParticles.Play();
     }
 
     private void RespondToRotateInput()
