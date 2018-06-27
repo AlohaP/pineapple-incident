@@ -750,66 +750,6 @@ Prefab:
       propertyPath: m_Name
       value: Pineapple Rocket
       objectReference: {fileID: 0}
-    - target: {fileID: 4990843397542178, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4990843397542178, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4990843397542178, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4990843397542178, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4990843397542178, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4990843397542178, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858687548591748, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858687548591748, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858687548591748, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858687548591748, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858687548591748, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858687548591748, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858687548591748, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858687548591748, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858687548591748, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
   m_IsPrefabParent: 0
@@ -1069,6 +1009,7 @@ GameObject:
   - component: {fileID: 2124879120}
   - component: {fileID: 2124879119}
   - component: {fileID: 2124879118}
+  - component: {fileID: 2124879121}
   m_Layer: 0
   m_Name: Terrain Bot-Left (0)
   m_TagString: Untagged
@@ -1146,3 +1087,16 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2124879116}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2124879121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2124879116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2061481bf81464741b874e2531be80f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 20, y: 0, z: 0}
+  movementFactor: 0
