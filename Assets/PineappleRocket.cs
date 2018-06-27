@@ -40,11 +40,13 @@ public class PineappleRocket : MonoBehaviour {
                 break;
             case "Finish":
                 state = State.Transcending;
+                audioSource.Stop();
                 audioSource.PlayOneShot(winEngine);
                 Invoke("LoadNextScene", 1f);  //parametirize time
                 break;
             default:
                 state = State.Dying;
+                audioSource.Stop();
                 audioSource.PlayOneShot(deathEngine);
                 Invoke("LoadFirstScene", 2f);
                 break;
