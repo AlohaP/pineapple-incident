@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.0943419, g: 0.63793105, b: 0.5390966, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0.5
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -817,6 +817,31 @@ Prefab:
     - target: {fileID: 1076775447701372, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
       propertyPath: m_Name
       value: Pineapple Rocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 198258462560473870, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.7013793
+      objectReference: {fileID: 0}
+    - target: {fileID: 198258462560473870, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
+        type: 2}
+      propertyPath: randomSeed
+      value: 211999206
+      objectReference: {fileID: 0}
+    - target: {fileID: 198258462560473870, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.77586204
+      objectReference: {fileID: 0}
+    - target: {fileID: 108342393551087286, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 108342393551087286, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
+        type: 2}
+      propertyPath: m_Range
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
