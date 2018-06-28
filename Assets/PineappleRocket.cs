@@ -16,11 +16,9 @@ public class PineappleRocket : MonoBehaviour {
 
     [SerializeField] ParticleSystem mainEngineParticles; 
     [SerializeField] ParticleSystem deathParticles; 
-    [SerializeField] ParticleSystem succesParticles; 
+    [SerializeField] ParticleSystem succesParticles;
 
-    enum State { Alive, Dying, Transcending};
-    State state = State.Alive;
-
+    bool isTransitioning = false;
     bool collisionsDisabled = true;
 
     // Use this for initialization
@@ -31,7 +29,7 @@ public class PineappleRocket : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (state == State.Alive) {
+        if (!isTransitioning) {
             RespondToThrustInput();
             RespondToRotateInput();
         }
@@ -55,7 +53,7 @@ public class PineappleRocket : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (state != State.Alive || !collisionsDisabled){ return; }
+        if (isTransitioning || !collisionsDisabled){ return; }
 
         switch (collision.gameObject.tag)
         {
@@ -72,7 +70,7 @@ public class PineappleRocket : MonoBehaviour {
 
     private void StartDeathSequence()
     {
-        state = State.Dying;
+        isTransitioning = true;
         audioSource.Stop();
         audioSource.PlayOneShot(death);
         succesParticles.Play();
@@ -81,11 +79,11 @@ public class PineappleRocket : MonoBehaviour {
 
     private void StartSuccesSequence()
     {
-        state = State.Transcending;
+        isTransitioning = true;
         audioSource.Stop();
         audioSource.PlayOneShot(succes);
         deathParticles.Play();
-        Invoke("LoadNextScene", levelLoadDelay);  //parametirize time
+        Invoke("LoadNextScene", levelLoadDelay); 
     }
 
     private void LoadFirstScene()
@@ -112,9 +110,14 @@ public class PineappleRocket : MonoBehaviour {
         }
         else
         {
-            audioSource.Stop();
-            mainEngineParticles.Stop();
+            StopApplyingThrust();
         }
+    }
+
+    private void StopApplyingThrust()
+    {
+        audioSource.Stop();
+        mainEngineParticles.Stop();
     }
 
     private void ApplyThrust()
@@ -129,9 +132,9 @@ public class PineappleRocket : MonoBehaviour {
 
     private void RespondToRotateInput()
     {
-        
+        rigidBody.angularVelocity = Vector3.zero; //remove rotation due to physics
+
         float rotationThisFrame = rcsThrust * Time.deltaTime;
-        rigidBody.freezeRotation = true; //take manual control of rotation
         if (Input.GetKey(KeyCode.A))
         {
             //we acces transform component in Unity, wich is available to every game object
@@ -141,6 +144,5 @@ public class PineappleRocket : MonoBehaviour {
         {
             transform.Rotate(-Vector3.forward * rotationThisFrame);
         }
-        rigidBody.freezeRotation = false;
     }
 }
