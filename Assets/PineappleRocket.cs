@@ -1,5 +1,6 @@
 ﻿using UnityEngine.SceneManagement;
 using UnityEngine;
+using System;
 
 public class PineappleRocket : MonoBehaviour {
 
@@ -20,6 +21,8 @@ public class PineappleRocket : MonoBehaviour {
     enum State { Alive, Dying, Transcending};
     State state = State.Alive;
 
+    bool collisionsDisabled = true;
+
     // Use this for initialization
     void Start () {
         rigidBody = GetComponent<Rigidbody>();
@@ -32,11 +35,27 @@ public class PineappleRocket : MonoBehaviour {
             RespondToThrustInput();
             RespondToRotateInput();
         }
+        if (Debug.isDebugBuild)
+        {
+            RespondToDebugKeys();
+        }
+    }
+
+    private void RespondToDebugKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextScene();
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            collisionsDisabled = !collisionsDisabled;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (state != State.Alive){ return; }
+        if (state != State.Alive || !collisionsDisabled){ return; }
 
         switch (collision.gameObject.tag)
         {

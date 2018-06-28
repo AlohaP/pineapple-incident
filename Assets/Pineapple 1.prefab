@@ -786,7 +786,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1076775447701372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.86, y: 8.5, z: -2.07}
+  m_LocalPosition: {x: -17.3, y: 8.5, z: 0}
   m_LocalScale: {x: 0.8898436, y: 1.5080446, z: 1}
   m_Children:
   - {fileID: 4262263863391988}
@@ -2138,8 +2138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rcsThrust: 300
-  mainThrust: 2000
-  levelLoadDelay: 1
+  mainThrust: 1800
+  levelLoadDelay: 2
   mainEngine: {fileID: 8300000, guid: 293e9b47ba403ba46b39f466a0ab3988, type: 3}
   death: {fileID: 8300000, guid: 7133017ee5508cc4a9fb74ea81b6e6aa, type: 3}
   succes: {fileID: 8300000, guid: 1018575687a8ae249ad4681e59da72a2, type: 3}
