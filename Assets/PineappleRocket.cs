@@ -90,12 +90,12 @@ public class PineappleRocket : MonoBehaviour {
 
     private void LoadFirstScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     private void LoadNextScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     private void RespondToThrustInput()
