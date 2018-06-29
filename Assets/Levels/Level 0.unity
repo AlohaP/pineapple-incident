@@ -2109,51 +2109,6 @@ Prefab:
       propertyPath: m_Name
       value: Pineapple Rocket
       objectReference: {fileID: 0}
-    - target: {fileID: 108342393551087286, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: m_Range
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 108342393551087286, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: m_SpotAngle
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 108342393551087286, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: m_Intensity
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 82001953257613038, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 82001953257613038, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108342393551087286, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198258462560473870, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.7764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 198258462560473870, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.7019608
-      objectReference: {fileID: 0}
-    - target: {fileID: 198258462560473870, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: randomSeed
-      value: 211999206
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
   m_IsPrefabParent: 0

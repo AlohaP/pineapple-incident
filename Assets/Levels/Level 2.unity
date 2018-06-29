@@ -34,7 +34,7 @@ RenderSettings:
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
-  m_ReflectionBounces: 1
+  m_ReflectionBounces: 2
   m_ReflectionIntensity: 0.3
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1891399789}
@@ -1296,13 +1296,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b45440e2feeca864982d9ceeadf14344, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 111
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1566,62 +1566,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 108342393551087286, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
         type: 2}
-      propertyPath: m_Range
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 108342393551087286, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: m_SpotAngle
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 108342393551087286, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: m_Intensity
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 82001953257613038, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 82001953257613038, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108342393551087286, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108466481321762002, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: m_SpotAngle
-      value: 44
-      objectReference: {fileID: 0}
-    - target: {fileID: 108466481321762002, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: m_Range
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4325191113480030, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -11.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 198258462560473870, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.7764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 198258462560473870, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.7019608
-      objectReference: {fileID: 0}
-    - target: {fileID: 198258462560473870, guid: 98efc6a45c58fc040baf0072a4aa6ea8,
-        type: 2}
-      propertyPath: randomSeed
-      value: 211999206
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98efc6a45c58fc040baf0072a4aa6ea8, type: 2}
