@@ -89,7 +89,7 @@ public class PineappleRocket : MonoBehaviour {
 
     private void LoadFirstScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     private void LoadNextScene()
@@ -98,7 +98,7 @@ public class PineappleRocket : MonoBehaviour {
         int nextSceneIndex = ++currentSceneIndex;
         if(nextSceneIndex == SceneManager.sceneCountInBuildSettings)
         {
-            nextSceneIndex = 0;
+            nextSceneIndex = 1;
         }
         SceneManager.LoadScene(nextSceneIndex);
     }

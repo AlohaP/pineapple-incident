@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 0.3
+  m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1462940311}
-  m_IndirectSpecularColor: {r: 0.25133708, g: 0.28059465, b: 0.32106486, a: 0.3}
+  m_IndirectSpecularColor: {r: 0.45090115, g: 0.49921864, b: 0.5660534, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -862,11 +862,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4999315222407440, guid: 5144b9c1f51e5e446bc11c4036adc07b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 10.52
+      value: 10.34
       objectReference: {fileID: 0}
     - target: {fileID: 4999315222407440, guid: 5144b9c1f51e5e446bc11c4036adc07b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -31.56
+      value: -31.25
       objectReference: {fileID: 0}
     - target: {fileID: 4999315222407440, guid: 5144b9c1f51e5e446bc11c4036adc07b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -887,18 +887,6 @@ Prefab:
     - target: {fileID: 4999315222407440, guid: 5144b9c1f51e5e446bc11c4036adc07b, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4999315222407440, guid: 5144b9c1f51e5e446bc11c4036adc07b, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -2.788
-      objectReference: {fileID: 0}
-    - target: {fileID: 4999315222407440, guid: 5144b9c1f51e5e446bc11c4036adc07b, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.87200004
-      objectReference: {fileID: 0}
-    - target: {fileID: 4999315222407440, guid: 5144b9c1f51e5e446bc11c4036adc07b, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.768
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5144b9c1f51e5e446bc11c4036adc07b, type: 2}
