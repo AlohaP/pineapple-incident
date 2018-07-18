@@ -8,7 +8,7 @@ public class PineappleRocket : MonoBehaviour {
     AudioSource audioSource;
     [SerializeField] float rcsThrust = 100f;  // rcs - reaction control system
     [SerializeField] float mainThrust = 100f;
-    [SerializeField] float levelLoadDelay = 2f;
+    [SerializeField] float levelLoadDelay = 1.5f;
 
     [SerializeField] AudioClip mainEngine; 
     [SerializeField] AudioClip death;
@@ -73,7 +73,8 @@ public class PineappleRocket : MonoBehaviour {
         isTransitioning = true;
         audioSource.Stop();
         audioSource.PlayOneShot(death);
-        succesParticles.Play();
+        deathParticles.Play();
+        
         Invoke("LoadFirstScene", levelLoadDelay);
     }
 
@@ -82,13 +83,13 @@ public class PineappleRocket : MonoBehaviour {
         isTransitioning = true;
         audioSource.Stop();
         audioSource.PlayOneShot(succes);
-        deathParticles.Play();
+        succesParticles.Play();
         Invoke("LoadNextScene", levelLoadDelay); 
     }
 
     private void LoadFirstScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     private void LoadNextScene()
@@ -97,7 +98,7 @@ public class PineappleRocket : MonoBehaviour {
         int nextSceneIndex = ++currentSceneIndex;
         if(nextSceneIndex == SceneManager.sceneCountInBuildSettings)
         {
-            nextSceneIndex = 0;
+            nextSceneIndex = 1;
         }
         SceneManager.LoadScene(nextSceneIndex);
     }
